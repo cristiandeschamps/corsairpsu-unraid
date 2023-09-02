@@ -1,22 +1,26 @@
 <?xml version='1.0' standalone='yes'?>
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "corsairpsu">
-<!ENTITY author    "giganode">
-<!ENTITY version   "2023.08.06">
+<!ENTITY author    "Cristian Deschamps (Fork)">
+<!ENTITY version   "2023.09.01">
 <!ENTITY launch    "Settings/CorsairPSUSettings">
-<!ENTITY gitURL    "https://raw.githubusercontent.com/giganode/&name;-unraid/master">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/cristiandeschamps/corsairpsu-unraid/fix-cpsumoncli-path">
 <!ENTITY pluginURL "&gitURL;/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/pkg">
 <!ENTITY plgPATH   "/boot/config/plugins/&name;">
 <!ENTITY plgNAME   "&name;-&version;-x86_64">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 <!ENTITY packages  "/boot/config/plugins/&name;/pkg">
-<!ENTITY md5       "34e836501ecda05c3798d3f7e131f1c7">
+<!ENTITY md5       "ced836ce8a8f40e41936f8d55c69bd2a">
 ]>
 <PLUGIN name="&name;" author="&author;" version="&version;" icon="icon-ups" launch="&launch;" pluginURL="&pluginURL;" min="6.11.5">
  
  <CHANGES>
-  
+ ##2023.09.01
+
+    - Fixed cpsumoncli path.
+    - Fixed cpsumoncli executable bit.
+
  ##2023.08.06
 
     - Fixed cpsumoncli, because it was not executable.
@@ -26,7 +30,7 @@
     - Added support for new HX1000i PSU with USB-C.
   
  ##2023.03.26e
-    
+
     - Repo forked from CyanLabs/corsairpsu-unraid. 
       Made the necessary changes for UnRAID v.6.12.0-beta7 while maintaining backwards compatibility.
  
